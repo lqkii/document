@@ -56,7 +56,7 @@ h2 {
 
 body {
   font-family: sans-serif;
-  background: lightgray;
+  background-color: white;
   counter-reset: page;
   font-size: 8.5pt;
 }
@@ -68,7 +68,7 @@ h2 {
 
 @media print {
   body {
-    background: white;
+    background-color: white;
   }
 }
 
@@ -79,14 +79,19 @@ h2 {
 }
 @page:left {
   margin-left: 0.25in;
-  margin-right: 1in;
-  @bottom-left {
+  margin-right: 0.75in;
+  background-color: #000000;
+  @bottom-right {
     content: counter(page);
   }
-}
+  }
+
 @page:right {
-  margin-left: 1in;
+  margin-left: 0.75in;
   margin-right: 0.25in;
+  @bottom-right {
+    content: counter(page);
+  }
 }
 
 .two-col {
@@ -104,4 +109,79 @@ img {
 
 figure {
   margin: 0;
+}
+
+.flip {
+  mix-blend-mode: multiply;
+  z-index: 2;
+  position: absolute;
+  top: 140px;
+  left: -200px;
+}
+
+.flip2 {
+  mix-blend-mode: multiply;
+  z-index: 3;
+  position: absolute;
+  top: 140px;
+  left: -200px;
+}
+
+.headshots {
+  width: 80%;
+  break-before: page;
+  z-index: 1;
+  position: absolute;
+  top: 100px;
+}
+
+.headshots_BW {
+  width: 80%;
+  break-before: page;
+  z-index: 1;
+  position: absolute;
+  top: 100px;
+  right: 0px;
+  filter: blur(2px) contrast(3);
+}
+
+.obituary {
+  background: #000000;
+  color: rgb(255, 255, 255);
+  z-index: 4;
+  top: 20px;
+  position: absolute;
+  font-size: 20pt;
+  filter: blur(1px);
+  mix-blend-mode: difference;
+  /* box-shadow: 0 0 10px 5px #ffca1b,
+  0 0 20px 7px #ebecca,
+  0 0 25px 20px #7e2913,
+  0 0 30px 25px #ff4314; */
+
+}
+
+.pageNum {
+  z-index: 5;
+  position: absolute;
+  font-size: 54pt;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 300;
+  font-style: italic;
+  right: 60px;
+  top: 40px;
+}
+
+.pageNumL {
+  z-index: 5;
+  position: absolute;
+  font-size: 54pt;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 300;
+  font-style: italic;
+  right: 60px;
+  top: 40px;
+  color: white;
+  filter: blur(1px);
+  mix-blend-mode: difference;
 }
