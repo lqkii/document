@@ -85,9 +85,11 @@ h2 {
   background-color: #000000;
   @bottom-left {
     content: counter(page);
-    font-size: 72pt;
+    font-size: 30pt;
     color: white;
     font-weight: 200;
+    filter: blur(1px);
+    mix-blend-mode: difference;
   }
   }
 
@@ -97,6 +99,9 @@ h2 {
   @bottom-right {
     content: counter(page);
     font-size: 6pt;
+    color: white;
+    filter: blur(0.8px);
+    mix-blend-mode: difference;
   }
 }
 
