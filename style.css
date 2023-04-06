@@ -196,3 +196,42 @@ figure {
   filter: blur(1px);
   mix-blend-mode: difference;
 }
+
+.title {
+  position: absolute;
+  top: 132px;
+  left: -30px;
+  letter-spacing: -1px;
+}
+
+.flip3 {
+  mix-blend-mode: multiply;
+  z-index: 2;
+  position: absolute;
+  top: 240px;
+  left: -204px;
+}
+
+.flip3_2 {
+  mix-blend-mode: multiply;
+  z-index: 2;
+  position: absolute;
+  top: 40px;
+  left: -44px;
+}
+
+.flip3_3 {
+  mix-blend-mode: multiply;
+  z-index: 2;
+  position: absolute;
+  top: 260px;
+  left: -244px;
+}
+
+.flip4 {
+  mix-blend-mode: multiply;
+  z-index: 2;
+  position: absolute;
+  top: 240px;
+  left: -204px;
+}
